@@ -105,6 +105,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _clipboardEnabled
 	
 	// Strangely this is not done properly by Qt designer...
 	connect(_setsMenu, SIGNAL(aboutToShow()), this, SLOT(populateSavedSearchesMenu()));
+
+	action_Quit->setShortcut(QKeySequence("Ctrl+Q"));
 	
 	// Reset search action
 	_searchWidget->resetSearchAction()->setShortcut(QKeySequence("Ctrl+R"));
